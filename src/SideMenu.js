@@ -15,32 +15,32 @@ const SideMenu = () => {
         <h2 className='SideMenu__title title'>Dashboard</h2>
         <p className='title__version'>v.01</p>
       </div>
-      <ul className='SideMenu__nav nav'>
-        <li className='nav__item'>
+      <ul className="SideMenu__nav nav">
+        <li className="nav__item">
           <img className="nav__item__icon" src={DashboardNav} alt="Dashboard" />
           <a className="nav__item__link" href="#">Dashboard</a>
         </li>
-        <li className='nav__item'>
+        <li className="nav__item">
           <img className="nav__item__icon" src={ProductNav} alt="Product" />
           <a className="nav__item__link" href="#">Product</a>
           <span className="nav__item__link__arrow"></span>
         </li>
-        <li className='nav__item'>
+        <li className="nav__item nav__item__active">
           <img className="nav__item__icon" src={CustomerNav} alt="Customers" />
           <a className="nav__item__link" href="#">Customers</a>
           <span className="nav__item__link__arrow"></span>
         </li>
-        <li className='nav__item'>
+        <li className="nav__item">
           <img className="nav__item__icon" src={IncomeNav} alt="Income" />
           <a className="nav__item__link" href="#">Income</a>
           <span className="nav__item__link__arrow"></span>
         </li>
-        <li className='nav__item'>
+        <li className="nav__item">
           <img className="nav__item__icon" src={PromoteNav} alt="Promote" />
           <a className="nav__item__link" href="#">Promote</a>
           <span className="nav__item__link__arrow"></span>
         </li>
-        <li className='nav__item'>
+        <li className="nav__item">
           <img className="nav__item__icon" src={HelpNav} alt="Help" />
           <a className="nav__item__link" href="#">Help</a>
           <span className="nav__item__link__arrow"></span>
