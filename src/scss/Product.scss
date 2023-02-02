@@ -13,12 +13,6 @@
   }
 }
 
-
-
-table {
-  width: 100%;
-}
-
 th {
   @include navLink(#B5B7C0);
 }
@@ -52,6 +46,11 @@ th {
 
   &__table {
     margin-right: 44px;
+
+    &__table {
+      width: 100%;
+    }
+
 
     &__top {
       border-bottom: 1px solid #EEEEEE;
@@ -97,5 +96,11 @@ th {
   &__active {
     @include navLink(#16C098);
     font-weight: 400;
+  }
+
+  &__numbers__data {
+    @include navLink(#B5B7C0);
+    padding-top: 32px;
+    padding-bottom: 41px;
   }
 }

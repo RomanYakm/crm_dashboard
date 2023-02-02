@@ -11,7 +11,7 @@ const Product = () => {
           <input className="customers__list__search" type="text" placeholder="Search" />
         </div>
         <div className="customers__list__table">
-          <table>
+          <table className="customers__list__table__table">
             <tr className="customers__list__table__top">
               <th className="customers__list__table__heading">Customer Name</th>
               <th className="customers__list__table__heading">Company</th>
@@ -28,7 +28,7 @@ const Product = () => {
               <td className="customers__list__table__element">United States</td>
               <td className="customers__list__table__element__status__active">Active</td>
             </tr>
-            <tr>
+            <tr className="customers__list__table__element__container">
               <td className="customers__list__table__element">Floyd Miles</td>
               <td className="customers__list__table__element">Yahoo</td>
               <td className="customers__list__table__element">(205) 555-0100</td>
@@ -36,7 +36,57 @@ const Product = () => {
               <td className="customers__list__table__element">Kiribati</td>
               <td className="customers__list__table__element__status__inactive">Inactive</td>
             </tr>
+            <tr className="customers__list__table__element__container">
+              <td className="customers__list__table__element">Floyd Miles</td>
+              <td className="customers__list__table__element">Yahoo</td>
+              <td className="customers__list__table__element">(205) 555-0100</td>
+              <td className="customers__list__table__element">floyd@yahoo.com</td>
+              <td className="customers__list__table__element">Kiribati</td>
+              <td className="customers__list__table__element__status__inactive">Inactive</td>
+            </tr>
+            <tr className="customers__list__table__element__container">
+              <td className="customers__list__table__element">Floyd Miles</td>
+              <td className="customers__list__table__element">Yahoo</td>
+              <td className="customers__list__table__element">(205) 555-0100</td>
+              <td className="customers__list__table__element">floyd@yahoo.com</td>
+              <td className="customers__list__table__element">Kiribati</td>
+              <td className="customers__list__table__element__status__active">Active</td>
+            </tr>
+            <tr className="customers__list__table__element__container">
+              <td className="customers__list__table__element">Floyd Miles</td>
+              <td className="customers__list__table__element">Yahoo</td>
+              <td className="customers__list__table__element">(205) 555-0100</td>
+              <td className="customers__list__table__element">floyd@yahoo.com</td>
+              <td className="customers__list__table__element">Kiribati</td>
+              <td className="customers__list__table__element__status__active">Active</td>
+            </tr>
+            <tr className="customers__list__table__element__container">
+              <td className="customers__list__table__element">Floyd Miles</td>
+              <td className="customers__list__table__element">Yahoo</td>
+              <td className="customers__list__table__element">(205) 555-0100</td>
+              <td className="customers__list__table__element">floyd@yahoo.com</td>
+              <td className="customers__list__table__element">Kiribati</td>
+              <td className="customers__list__table__element__status__active">Active</td>
+            </tr>
+            <tr className="customers__list__table__element__container">
+              <td className="customers__list__table__element">Jacob Jones</td>
+              <td className="customers__list__table__element">Yahoo</td>
+              <td className="customers__list__table__element">(208) 555-0112</td>
+              <td className="customers__list__table__element">jacob@yahoo.com</td>
+              <td className="customers__list__table__element">Brazil</td>
+              <td className="customers__list__table__element__status__active">Active</td>
+            </tr>
+            <tr className="customers__list__table__element__container">
+              <td className="customers__list__table__element">Kristin Watson</td>
+              <td className="customers__list__table__element">Facebook</td>
+              <td className="customers__list__table__element">(704) 555-0127</td>
+              <td className="customers__list__table__element">kristin@facebook.com</td>
+              <td className="customers__list__table__element">Åland Islands</td>
+              <td className="customers__list__table__element__status__inactive">Inactive</td>
+            </tr>
           </table>
+          <p className="customers__list__numbers__data">Showing data 1 to 8 of  256K entries</p>
+          <div></div>
         </div>
       </div>
     </section>
