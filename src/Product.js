@@ -13,20 +13,28 @@ const Product = () => {
         <div className="customers__list__table">
           <table>
             <tr className="customers__list__table__top">
-              <th>Customer Name</th>
-              <th>Company</th>
-              <th>Phone Number</th>
-              <th>Email</th>
-              <th>Country</th>
-              <th>Status</th>
+              <th className="customers__list__table__heading">Customer Name</th>
+              <th className="customers__list__table__heading">Company</th>
+              <th className="customers__list__table__heading">Phone Number</th>
+              <th className="customers__list__table__heading">Email</th>
+              <th className="customers__list__table__heading">Country</th>
+              <th className="customers__list__table__heading__status">Status</th>
+            </tr>
+            <tr className="customers__list__table__element__container">
+              <td className="customers__list__table__element">Jane Cooper</td>
+              <td className="customers__list__table__element">Microsoft</td>
+              <td className="customers__list__table__element">(225) 555-0118</td>
+              <td className="customers__list__table__element">jane@microsoft.com</td>
+              <td className="customers__list__table__element">United States</td>
+              <td className="customers__list__table__element__status__active">Active</td>
             </tr>
             <tr>
-              <th>Jane Cooper</th>
-              <th>Microsoft</th>
-              <th>(225) 555-0118</th>
-              <th>jane@microsoft.com</th>
-              <th>United States</th>
-              <th>Active</th>
+              <td className="customers__list__table__element">Floyd Miles</td>
+              <td className="customers__list__table__element">Yahoo</td>
+              <td className="customers__list__table__element">(205) 555-0100</td>
+              <td className="customers__list__table__element">floyd@yahoo.com</td>
+              <td className="customers__list__table__element">Kiribati</td>
+              <td className="customers__list__table__element__status__inactive">Inactive</td>
             </tr>
           </table>
         </div>
