@@ -20,7 +20,7 @@
   color: #838383;
 }
 
-@mixin navLink {
+@mixin navLink($color: #9197B3) {
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -28,5 +28,15 @@
 
   letter-spacing: -0.01em;
 
-  color: #9197B3;
+  color: $color;
+}
+
+@mixin profileInfoRole {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+
+  letter-spacing: 0.01em;
+
+  color: #757575;
 }
