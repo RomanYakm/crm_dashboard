@@ -3,11 +3,11 @@ const Product = () => {
     <section className="Product">
       <h1 className="Product__title title">Hello Evano 👋🏼,</h1>
       <div className="Product__customers__list customers__list">
-        <div>
+        <div className="customers__list__info">
           <h2 className="customers__list__title">All Customers</h2>
-          <span className="customers__list__active">Active Members</span>
+          <p className="customers__list__active">Active Members</p>
         </div>
-        <input type="text" />
+        <input className="customers__list__search" type="text" />
       </div>
     </section>
   );

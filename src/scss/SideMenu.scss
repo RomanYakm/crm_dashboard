@@ -1,3 +1,60 @@
+@use './Mixins.scss' as *;
+
 .SideMenu {
-  font-family: 'Poppins', sans-serif;
+
+  &__top {
+    display: flex;
+    padding-top: 36px;
+    padding-left: 32px;
+    padding-right: 61px;
+    padding-bottom: 37px;
+  }
+}
+
+.title {
+  align-self: baseline;
+  @include logoText;
+
+  &__version {
+    align-self: baseline;
+    @include logoVersion;
+  }
+}
+
+.nav {
+  padding: 28px;
+  padding-left: 0;
+
+  &__item {
+    width: 250px;
+    margin-left: 28px;
+    border-radius: 8px;
+    
+
+    &:hover {
+      background-color: #5932EA;
+      color: white;
+
+      &__link {
+        color: white;
+      }
+    }
+
+    &__icon {
+      padding: 11px;
+    }
+
+    &__link {
+      @include navLink;
+      text-decoration: none;
+      padding-left: 3px;
+
+      &::after {
+        display: inline-block;
+        content: ">";
+        font-weight: bold;
+        transition: transform 0.3s;
+      }
+    }
+  }
 }
