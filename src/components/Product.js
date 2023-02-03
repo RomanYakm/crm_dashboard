@@ -35,39 +35,31 @@ const Product = () => {
     });
   };
 
-  const setPagePlus = (page) => {
-    const buttonsList = page.currentTarget.parentNode.childNodes;
-    let countingNumber = +pageNumber + 1;
-
-
-    cleanButtons(buttonsList, countingNumber);
-  };
-
-  const setPageMinus = (page) => {
-    const buttonsList = page.currentTarget.parentNode.childNodes;
-    let countingNumber = +pageNumber - 1;
-
-
-    cleanButtons(buttonsList, countingNumber);
-  };
-
-  const nextPage = (e) => {
+  const nextPage = (page) => {
     if (pageCounter + 8 > data.length) {
       return false;
     } else {
       setPageCounter(pageCounter + 8);
       setPageNumber(pageNumber + 1);
-      setPagePlus(e);
+      const buttonsList = page.currentTarget.parentNode.childNodes;
+      let countingNumber = +pageNumber + 1;
+  
+  
+      cleanButtons(buttonsList, countingNumber);
     }
   };
 
-  const prevPage = (e) => {
+  const prevPage = (page) => {
     if (pageCounter === 0) {
       return false;
     } else {
       setPageCounter(pageCounter - 8);
       setPageNumber(pageNumber - 1);
-      setPageMinus(e);
+      const buttonsList = page.currentTarget.parentNode.childNodes;
+      let countingNumber = +pageNumber - 1;
+  
+  
+      cleanButtons(buttonsList, countingNumber);
     }
   };
 
