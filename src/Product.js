@@ -1,32 +1,56 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Product = () => {
   const [data, setData] = useState(null);
   const [pageCounter, setPageCounter] = useState(0);
   let pages = 0;
 
-  const getData = () => {
-    fetch("./CustomersList.json")
-      .then(response => {
-        return response.json();
-      })
-      .then(myJson => {
-        setData(myJson);
-      });
-  };
+  useEffect(() => {
+    const getData = async () => {
+      await fetch("./CustomersList.json")
+        .then(response => {
+          return response.json();
+        })
+        .then(myJson => {
+          setData(myJson);
+        });
+    };
 
-  getData();
+    getData();
+  }, []);
 
   if (data) {
     pages = Math.ceil(data.length / 8);
   }
 
   const nextPage = () => {
-    setPageCounter(pageCounter + 8);
+    if (pageCounter + 8 > data.length) {
+      return false;
+    } else {
+      setPageCounter(pageCounter + 8);
+    }
   };
 
   const prevPage = () => {
-    setPageCounter(pageCounter - 8);
+    if (pageCounter === 0) {
+      return false;
+    } else {
+      setPageCounter(pageCounter - 8);
+    }
+  };
+
+
+  let pageNumberChoosen = pageCounter;
+
+  console.log(pageCounter, pageNumberChoosen, "PAGENUMBER");
+
+  const pageSelect = (page) => {
+    if (pageNumberChoosen % 4 === 0 || pageNumberChoosen < 48) {
+      const pageNumber = page.target.innerHTML;
+      setPageCounter(pageCounter + +pageNumber);
+      console.log(pageNumber, pageCounter * +pageNumber);
+    }
+
   };
   
   return (
@@ -53,7 +77,7 @@ const Product = () => {
               </tr>
               {data && data.slice(pageCounter, pageCounter + 8).map((item) => 
                 <tr className="customers__list__table__element__container" key={item.id}>
-                <td className="customers__list__table__element">{item.customerName}</td>
+                <td className="customers__list__table__element">{item.customerName} {item.id}</td>
                 <td className="customers__list__table__element">{item.company}</td>
                 <td className="customers__list__table__element">{item.phoneNumber}</td>
                 <td className="customers__list__table__element">{item.email}</td>
@@ -66,11 +90,19 @@ const Product = () => {
               )}
             </tbody>
           </table>
-          <p className="customers__list__numbers__data">Showing data 1 to 8 of {data && data.length} entries</p>
-          <div>
-            <button onClick={prevPage}>Prev Page</button>
-            {pages}
-            <button onClick={nextPage}>Next Page</button>
+          <div className="customers__list__numbers">
+            <p className="customers__list__numbers__data">Showing data 1 to 8 of {data && data.length} entries</p>
+            <div className="customers__list__numbers__control">
+              <button className="customers__list__numbers__control__button" onClick={prevPage}>&#60;</button>
+              {pages && [...Array(pages).keys()].map((e, i) => {
+                if (e === 0) {
+                  return <button className="customers__list__numbers__control__button__page__active" key={i} onClick={pageSelect}>{e + 1}</button>;
+                } else {
+                  return <button className="customers__list__numbers__control__button__page" key={i} onClick={pageSelect}>{e + 1}</button>;
+                }
+              }) }
+              <button className="customers__list__numbers__control__button" onClick={nextPage}>&#62;</button>
+            </div>
           </div>
         </div>
       </div>

@@ -98,9 +98,42 @@ th {
     font-weight: 400;
   }
 
-  &__numbers__data {
-    @include navLink(#B5B7C0);
-    padding-top: 32px;
-    padding-bottom: 41px;
+  &__numbers {
+    display: flex;
+    justify-content: space-between;
+
+    &__data {
+      @include navLink(#B5B7C0);
+      padding-top: 32px;
+      padding-bottom: 41px;
+    }
+
+    &__control {
+      padding-top: 36px;
+      padding-bottom: 41px;
+
+      &__button {
+        @include controlButton;
+        @include numberButton;
+
+        margin-left: 12px;
+
+        &__page {
+          width: 26px;
+          height: 24px;
+          @include controlButton;
+          @include numberButton(#F5F5F5, #EEEEEE);
+          color: #404B52;
+          margin-left: 12px;
+
+          &__active {
+            @include controlButton;
+            @include numberButton(#5932EA, #5932EA);
+            color: white;
+            margin-left: 12px;
+          }
+        }
+      }
+    }
   }
 }
