@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 const Product = () => {
   const [data, setData] = useState(null);
   const [pageCounter, setPageCounter] = useState(0);
+  const [pageNumber, setPageNumber] = useState(1);
   let pages = 0;
 
   useEffect(() => {
@@ -23,35 +24,71 @@ const Product = () => {
     pages = Math.ceil(data.length / 8);
   }
 
-  const nextPage = () => {
+  const cleanButtons = (buttonsList, countingNumber) => {
+    buttonsList.forEach((el, index) => {
+      console.log(el.classList, index, countingNumber);
+      if (index !== +countingNumber) {
+        el.classList.remove("customers__list__numbers__control__button__page__active");
+      } else {
+        el.classList.add("customers__list__numbers__control__button__page__active");
+      }
+    });
+  };
+
+  const setPagePlus = (page) => {
+    const buttonsList = page.currentTarget.parentNode.childNodes;
+    let countingNumber = +pageNumber + 1;
+
+
+    cleanButtons(buttonsList, countingNumber);
+  };
+
+  const setPageMinus = (page) => {
+    const buttonsList = page.currentTarget.parentNode.childNodes;
+    let countingNumber = +pageNumber - 1;
+
+
+    cleanButtons(buttonsList, countingNumber);
+  };
+
+  const nextPage = (e) => {
     if (pageCounter + 8 > data.length) {
       return false;
     } else {
       setPageCounter(pageCounter + 8);
+      setPageNumber(pageNumber + 1);
+      setPagePlus(e);
     }
   };
 
-  const prevPage = () => {
+  const prevPage = (e) => {
     if (pageCounter === 0) {
       return false;
     } else {
       setPageCounter(pageCounter - 8);
+      setPageNumber(pageNumber - 1);
+      setPageMinus(e);
     }
   };
 
-
-  let pageNumberChoosen = pageCounter;
-
-  console.log(pageCounter, pageNumberChoosen, "PAGENUMBER");
+  let pageNumberChoosen = pageCounter;  
 
   const pageSelect = (page) => {
-    if (pageNumberChoosen % 4 === 0 || pageNumberChoosen < 48) {
-      const pageNumber = page.target.innerHTML;
-      setPageCounter(pageCounter + +pageNumber);
-      console.log(pageNumber, pageCounter * +pageNumber);
-    }
+    const buttonsList = page.currentTarget.parentNode.childNodes;
+    const pageNumber = page.target.innerHTML;
 
+    cleanButtons(buttonsList, pageNumber);
+
+    page.currentTarget.classList.add("customers__list__numbers__control__button__page__active");
+    if (pageNumberChoosen % 4 === 0) {
+      const pageNumber = page.target.innerHTML - 1;
+      const counting =  (pageNumber * 8) % data.length;
+      setPageCounter(counting);
+      setPageNumber(pageNumber + 1);
+    }
   };
+
+  console.log(pageNumberChoosen, pageNumberChoosen, pageNumber);
   
   return (
     <section className="Product">
@@ -96,7 +133,7 @@ const Product = () => {
               <button className="customers__list__numbers__control__button" onClick={prevPage}>&#60;</button>
               {pages && [...Array(pages).keys()].map((e, i) => {
                 if (e === 0) {
-                  return <button className="customers__list__numbers__control__button__page__active" key={i} onClick={pageSelect}>{e + 1}</button>;
+                  return <button className="customers__list__numbers__control__button__page customers__list__numbers__control__button__page__active" key={i} onClick={pageSelect}>{e + 1}</button>;
                 } else {
                   return <button className="customers__list__numbers__control__button__page" key={i} onClick={pageSelect}>{e + 1}</button>;
                 }
