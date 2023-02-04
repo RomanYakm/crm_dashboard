@@ -7,14 +7,41 @@
   padding-top: 41px;
   width: 100%;
 
+  &__top {
+    display: flex;
+  }
+
   &__title {
     @include welcomeUser;
     padding-bottom: 51px;
+
+    @include onTabletLower {
+      padding-left: 38px;
+    }
   }
+
+  @include onTablet {
+    padding-left: 35px;
+    padding-right: 47px;
+  }
+
+  @include onTabletLower {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
 }
 
 th {
   @include navLink(#B5B7C0);
+}
+
+.burger {
+  display: none;
+
+  @include onTabletSmall {
+    display: flex;
+  }
 }
 
 
@@ -101,6 +128,7 @@ th {
   &__numbers {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     &__data {
       @include navLink(#B5B7C0);
@@ -109,6 +137,7 @@ th {
     }
 
     &__control {
+      display: flex;
       padding-top: 36px;
       padding-bottom: 41px;
 

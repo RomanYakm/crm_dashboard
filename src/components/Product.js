@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { ReactComponent as BurgerIcon } from "../img/Hamburger_icon.svg";
 
 const Product = () => {
   const [data, setData] = useState(null);
@@ -84,7 +85,10 @@ const Product = () => {
   
   return (
     <section className="Product">
-      <h1 className="Product__title title">Hello Evano 👋🏼,</h1>
+      <div className="Product__top">
+        <h1 className="Product__title title">Hello Evano 👋🏼,</h1>
+        <BurgerIcon className="Product__burger burger" fill="#9197B3" />
+      </div>
       <div className="Product__customers__list customers__list">
         <div className="customers__list__top">
           <div className="customers__list__info">
