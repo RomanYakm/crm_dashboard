@@ -16,6 +16,12 @@
   }
 }
 
+@mixin onMobile {
+  @media (min-width: 320px) and (max-width: 620px) {
+    @content;
+  }
+}
+
 @mixin logoText {
   font-style: normal;
   font-weight: 600;

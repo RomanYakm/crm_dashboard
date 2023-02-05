@@ -8,8 +8,13 @@ import { ReactComponent as HelpNav } from "../img/message-question 1.svg";
 import ProfilePic from "../img/profile_pic.png";
 import { Link } from "react-router-dom";
 
-const SideMenu = () => {
+const SideMenu = ({ toggleMenu, setToggleMenu }) => {
+  const handleCloseMenu = () => {
+    setToggleMenu(false);
+  };
+  
   const handleChange = (e) => {
+    handleCloseMenu();
     const menuItems = ["Dashboard", "Product", "Customers", "Income", "Promote", "Help"];
     const choosedEl = e.target.innerHTML;
     if (menuItems.includes(choosedEl)) {
@@ -28,11 +33,12 @@ const SideMenu = () => {
   };
 
   return ( 
-    <section className='SideMenu'>
+    <section className={toggleMenu ? "SideMenu SideMenu__show" : "SideMenu "}>
       <div className="SideMenu__top">
         <DashboardLogo className="SideMenu__ico" />
         <h2 className='SideMenu__title title'>Dashboard</h2>
         <p className='title__version'>v.01</p>
+        <button className="SideMenu__cross" onClick={handleCloseMenu}>X</button>
       </div>
       <ul className="SideMenu__nav nav" onClick={handleChange}>
         <li className="nav__item">

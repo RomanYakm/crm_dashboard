@@ -25,6 +25,7 @@
         "semi" : "warn",
         "quotes" : "warn",
         "block-spacing": "warn",
-        "no-whitespace-before-property" :"warn"
+        "no-whitespace-before-property" :"warn",
+        "react/prop-types": "off"
     }
 }
