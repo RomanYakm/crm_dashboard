@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.cf620078.css",
-    "main.js": "./static/js/main.fac54fbf.js",
+    "main.js": "./static/js/main.bc243601.js",
     "static/media/discount-shape 1.svg": "./static/media/discount-shape 1.5230029f4e637c534c143c4d95cf421f.svg",
     "static/media/wallet-money 2.svg": "./static/media/wallet-money 2.25d824b57e5c5a753432296807e7285d.svg",
     "static/media/3d-square 1.svg": "./static/media/3d-square 1.1ca4fd5b650bd0a4104c1a2789ca1171.svg",
@@ -13,10 +13,10 @@
     "static/media/Hamburger_icon.svg": "./static/media/Hamburger_icon.b778cb1777612594612f0bf2e4ff8477.svg",
     "static/media/search 1.svg": "./static/media/search 1.d555a35800fec6f7c192.svg",
     "main.cf620078.css.map": "./static/css/main.cf620078.css.map",
-    "main.fac54fbf.js.map": "./static/js/main.fac54fbf.js.map"
+    "main.bc243601.js.map": "./static/js/main.bc243601.js.map"
   },
   "entrypoints": [
     "static/css/main.cf620078.css",
-    "static/js/main.fac54fbf.js"
+    "static/js/main.bc243601.js"
   ]
 }
