@@ -19,7 +19,6 @@ const SideMenu = ({ toggleMenu, setToggleMenu }) => {
     const choosedEl = e.target.innerHTML;
     if (menuItems.includes(choosedEl)) {
       const buttonsList = e.currentTarget.parentNode.childNodes[1].childNodes;
-      console.log(buttonsList, choosedEl);
 
       buttonsList.forEach(button => {
         const buttonText = button.childNodes[1].innerHTML;

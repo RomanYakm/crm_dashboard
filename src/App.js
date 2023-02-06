@@ -22,7 +22,7 @@ export const App = () => {
       <React.Fragment>
         <SideMenu toggleMenu={toggleMenu} setToggleMenu={setToggleMenu} />
         <Routes>
-          <Route exact path="/customers" element={<Product setToggleMenu={setToggleMenu} toggleMenu={toggleMenu} handleMenuShow={handleMenuShow} />} />
+          <Route exact path="/customers" element={<Product handleMenuShow={handleMenuShow} />} />
           <Route exact path="/product" element={<Customers handleMenuShow={handleMenuShow} />} />
           <Route exact path="/dashboard" element={<Dashboard handleMenuShow={handleMenuShow} />} />
           <Route exact path="/income" element={<Income handleMenuShow={handleMenuShow} />} />

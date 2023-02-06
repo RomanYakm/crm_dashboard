@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";  
 import Burger from "./Burger";
 
-const Product = ({ toggleMenu, setToggleMenu, handleMenuShow }) => {
+const Product = ({ handleMenuShow }) => {
   const [data, setData] = useState(null);
   const [pageCounter, setPageCounter] = useState(0);
   const [pageNumber, setPageNumber] = useState(1);
@@ -9,7 +9,7 @@ const Product = ({ toggleMenu, setToggleMenu, handleMenuShow }) => {
 
   useEffect(() => {
     const getData = async () => {
-      await fetch("./CustomersList.json")
+      await fetch("https://raw.githubusercontent.com/RomanYakm/crm_dashboard/gh-pages/CustomersList.json")
         .then(response => {
           return response.json();
         })
@@ -27,7 +27,6 @@ const Product = ({ toggleMenu, setToggleMenu, handleMenuShow }) => {
 
   const cleanButtons = (buttonsList, countingNumber) => {
     buttonsList.forEach((el, index) => {
-      console.log(el.classList, index, countingNumber);
       if (index !== +countingNumber) {
         el.classList.remove("customers__list__numbers__control__button__page__active");
       } else {
