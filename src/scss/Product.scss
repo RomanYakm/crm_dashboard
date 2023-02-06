@@ -81,6 +81,12 @@ th {
     padding-bottom: 40px;
     align-items: center;
     justify-content: space-between;
+
+    @include onMobile {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 5px;
+    }
   }
 
   &__table {
@@ -165,10 +171,19 @@ th {
     justify-content: space-between;
     align-items: center;
 
+    @include onMobile {
+      display: block;
+    }
+
     &__data {
       @include navLink(#B5B7C0);
       padding-top: 32px;
       padding-bottom: 41px;
+
+      @include onMobile {
+        display: flex;
+        justify-content: center;
+      }
     }
 
     &__control {
