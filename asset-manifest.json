@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/crm_dashboard/static/css/main.03ac8e35.css",
-    "main.js": "/crm_dashboard/static/js/main.9f5f4410.js",
-    "static/media/discount-shape 1.svg": "/crm_dashboard/static/media/discount-shape 1.5230029f4e637c534c143c4d95cf421f.svg",
-    "static/media/wallet-money 2.svg": "/crm_dashboard/static/media/wallet-money 2.25d824b57e5c5a753432296807e7285d.svg",
-    "static/media/3d-square 1.svg": "/crm_dashboard/static/media/3d-square 1.1ca4fd5b650bd0a4104c1a2789ca1171.svg",
-    "static/media/message-question 1.svg": "/crm_dashboard/static/media/message-question 1.5d23912a887f9edc9d9f8d957ec960e6.svg",
-    "static/media/user-square 1.svg": "/crm_dashboard/static/media/user-square 1.27617add0f452c671fec310dc74fcb18.svg",
-    "static/media/dashboard_logo.svg": "/crm_dashboard/static/media/dashboard_logo.fe984a6cdb2ef8c5a0b69a7ef20deea3.svg",
-    "static/media/key-square.svg": "/crm_dashboard/static/media/key-square.153a0eb179be0548729792a4f21fc52e.svg",
-    "index.html": "/crm_dashboard/index.html",
-    "static/media/Hamburger_icon.svg": "/crm_dashboard/static/media/Hamburger_icon.b778cb1777612594612f0bf2e4ff8477.svg",
-    "static/media/search 1.svg": "/crm_dashboard/static/media/search 1.d555a35800fec6f7c192.svg",
-    "main.03ac8e35.css.map": "/crm_dashboard/static/css/main.03ac8e35.css.map",
-    "main.9f5f4410.js.map": "/crm_dashboard/static/js/main.9f5f4410.js.map"
+    "main.css": "./static/css/main.cf620078.css",
+    "main.js": "./static/js/main.3f934db6.js",
+    "static/media/discount-shape 1.svg": "./static/media/discount-shape 1.5230029f4e637c534c143c4d95cf421f.svg",
+    "static/media/wallet-money 2.svg": "./static/media/wallet-money 2.25d824b57e5c5a753432296807e7285d.svg",
+    "static/media/3d-square 1.svg": "./static/media/3d-square 1.1ca4fd5b650bd0a4104c1a2789ca1171.svg",
+    "static/media/message-question 1.svg": "./static/media/message-question 1.5d23912a887f9edc9d9f8d957ec960e6.svg",
+    "static/media/user-square 1.svg": "./static/media/user-square 1.27617add0f452c671fec310dc74fcb18.svg",
+    "static/media/dashboard_logo.svg": "./static/media/dashboard_logo.fe984a6cdb2ef8c5a0b69a7ef20deea3.svg",
+    "static/media/key-square.svg": "./static/media/key-square.153a0eb179be0548729792a4f21fc52e.svg",
+    "index.html": "./index.html",
+    "static/media/Hamburger_icon.svg": "./static/media/Hamburger_icon.b778cb1777612594612f0bf2e4ff8477.svg",
+    "static/media/search 1.svg": "./static/media/search 1.d555a35800fec6f7c192.svg",
+    "main.cf620078.css.map": "./static/css/main.cf620078.css.map",
+    "main.3f934db6.js.map": "./static/js/main.3f934db6.js.map"
   },
   "entrypoints": [
-    "static/css/main.03ac8e35.css",
-    "static/js/main.9f5f4410.js"
+    "static/css/main.cf620078.css",
+    "static/js/main.3f934db6.js"
   ]
 }
