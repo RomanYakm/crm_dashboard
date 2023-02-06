@@ -1,8 +1,7 @@
-import { useEffect, useState } from "react";
-import { ReactComponent as BurgerIcon } from "../img/Hamburger_icon.svg";
+import { useEffect, useState } from "react";  
+import Burger from "./Burger";
 
-const Product = ({toggleMenu, setToggleMenu}) => {
-  console.log(toggleMenu, "PRODUCT");
+const Product = ({ toggleMenu, setToggleMenu, handleMenuShow }) => {
   const [data, setData] = useState(null);
   const [pageCounter, setPageCounter] = useState(0);
   const [pageNumber, setPageNumber] = useState(1);
@@ -81,16 +80,12 @@ const Product = ({toggleMenu, setToggleMenu}) => {
       setPageNumber(pageNumber + 1);
     }
   };
-
-  const handleMenuShow = () => {
-    setToggleMenu(!toggleMenu);
-  };
   
   return (
     <section className="Product">
       <div className="Product__top">
         <h1 className="Product__title title">Hello Evano 👋🏼,</h1>
-        <BurgerIcon className="Product__burger burger" fill="#9197B3" onClick={handleMenuShow} />
+        <Burger handleMenuShow={handleMenuShow} />
       </div>
       <div className="Product__customers__list customers__list">
         <div className="customers__list__top">

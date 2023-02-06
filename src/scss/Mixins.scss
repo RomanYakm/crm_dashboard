@@ -22,6 +22,12 @@
   }
 }
 
+@mixin tableOnMobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 @mixin logoText {
   font-style: normal;
   font-weight: 600;

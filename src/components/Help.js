@@ -1,6 +1,13 @@
-const Help = () => {
+import Burger from "./Burger";
+
+const Help = ({ handleMenuShow }) => {
   return (
-    <p>Help</p>
+    <section className="Product">
+      <div className="Product__top">
+        <h1 className="Product__title title">Help</h1>
+        <Burger handleMenuShow={handleMenuShow} />
+      </div>
+    </section>
   );
 };
 

@@ -67,6 +67,10 @@ th {
     border: none;
     background: url('../img/search\ 1.svg') no-repeat 11px, #F9FBFF;
 
+    @include onMobile {
+      margin-right: 20px;
+    }
+
     &::placeholder {
       @include profileInfoRole(#B5B7C0);
     }
@@ -86,6 +90,17 @@ th {
       margin-right: 0;
     }
 
+    &__element__container {
+      
+      @include onMobile {
+        @include tableOnMobile;
+      }
+      
+      @include onMobile {
+        @include tableOnMobile;
+      }
+    }
+
     &__table {
       width: 100%;
     }
@@ -93,11 +108,19 @@ th {
 
     &__top {
       border-bottom: 1px solid #EEEEEE;
+
+      @include onMobile {
+        @include tableOnMobile;
+      }
     }
 
     &__heading {
       text-align: left;
       padding-bottom: 14px;
+
+      @include onMobile {
+        display: flex;
+      }
     }
 
     &__element {
