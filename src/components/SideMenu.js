@@ -49,7 +49,7 @@ const SideMenu = ({ toggleMenu, setToggleMenu }) => {
           <Link className="nav__item__link" to="/product">Product</Link>
           <span className="nav__item__link__arrow"></span>
         </li>
-        <li className="nav__item">
+        <li className="nav__item nav__item__active">
           <CustomerNav className="nav__item__icon" fill="#9197B3" stroke="#9197B3" />
           <Link className="nav__item__link" to="/customers">Customers</Link>
           <span className="nav__item__link__arrow"></span>
