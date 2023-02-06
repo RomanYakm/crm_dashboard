@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/crm_dashboardnpm%20install%20--save%20gh-pages/static/css/main.372a82a9.css",
+    "main.js": "/crm_dashboardnpm%20install%20--save%20gh-pages/static/js/main.99dba7f1.js",
+    "static/media/discount-shape 1.svg": "/crm_dashboardnpm%20install%20--save%20gh-pages/static/media/discount-shape 1.5230029f4e637c534c143c4d95cf421f.svg",
+    "static/media/wallet-money 2.svg": "/crm_dashboardnpm%20install%20--save%20gh-pages/static/media/wallet-money 2.25d824b57e5c5a753432296807e7285d.svg",
+    "static/media/3d-square 1.svg": "/crm_dashboardnpm%20install%20--save%20gh-pages/static/media/3d-square 1.1ca4fd5b650bd0a4104c1a2789ca1171.svg",
+    "static/media/message-question 1.svg": "/crm_dashboardnpm%20install%20--save%20gh-pages/static/media/message-question 1.5d23912a887f9edc9d9f8d957ec960e6.svg",
+    "static/media/user-square 1.svg": "/crm_dashboardnpm%20install%20--save%20gh-pages/static/media/user-square 1.27617add0f452c671fec310dc74fcb18.svg",
+    "static/media/dashboard_logo.svg": "/crm_dashboardnpm%20install%20--save%20gh-pages/static/media/dashboard_logo.fe984a6cdb2ef8c5a0b69a7ef20deea3.svg",
+    "static/media/key-square.svg": "/crm_dashboardnpm%20install%20--save%20gh-pages/static/media/key-square.153a0eb179be0548729792a4f21fc52e.svg",
+    "index.html": "/crm_dashboardnpm%20install%20--save%20gh-pages/index.html",
+    "static/media/Hamburger_icon.svg": "/crm_dashboardnpm%20install%20--save%20gh-pages/static/media/Hamburger_icon.b778cb1777612594612f0bf2e4ff8477.svg",
+    "static/media/search 1.svg": "/crm_dashboardnpm%20install%20--save%20gh-pages/static/media/search 1.d555a35800fec6f7c192.svg",
+    "main.372a82a9.css.map": "/crm_dashboardnpm%20install%20--save%20gh-pages/static/css/main.372a82a9.css.map",
+    "main.99dba7f1.js.map": "/crm_dashboardnpm%20install%20--save%20gh-pages/static/js/main.99dba7f1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.372a82a9.css",
+    "static/js/main.99dba7f1.js"
+  ]
+}
