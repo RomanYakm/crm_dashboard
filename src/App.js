@@ -11,7 +11,7 @@ import Help from "./components/Help";
 
 
 export const App = () => {
-  const [toggleMenu, setToggleMenu] = useState(false);
+  const [toggleMenu, setToggleMenu] = useState(true);
 
   const handleMenuShow = () => {
     setToggleMenu(!toggleMenu);
@@ -22,7 +22,6 @@ export const App = () => {
       <React.Fragment>
         <SideMenu toggleMenu={toggleMenu} setToggleMenu={setToggleMenu} />
         <Routes>
-          <Route exact path="/" element={<Product handleMenuShow={handleMenuShow} />} />
           <Route exact path="/customers" element={<Product handleMenuShow={handleMenuShow} />} />
           <Route exact path="/product" element={<Customers handleMenuShow={handleMenuShow} />} />
           <Route exact path="/dashboard" element={<Dashboard handleMenuShow={handleMenuShow} />} />
